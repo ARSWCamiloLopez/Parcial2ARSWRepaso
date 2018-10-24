@@ -64,7 +64,7 @@ public class ParcialAPIController {
     @RequestMapping(method = RequestMethod.GET, path = "/weekly/{shareName}")
     public ResponseEntity<?> getWeeklyShare(@PathVariable("shareName") String shareName){
         try {
-            return new ResponseEntity<>(pServices.getIntradayShare(shareName),
+            return new ResponseEntity<>(pServices.getWeeklyShare(shareName),
                     HttpStatus.ACCEPTED);
         } catch (IOException ex) {
             return new ResponseEntity<>("No se han podido obtener las acciones", HttpStatus.NOT_FOUND);
@@ -79,7 +79,7 @@ public class ParcialAPIController {
     @RequestMapping(method = RequestMethod.GET, path = "/monthly/{shareName}")
     public ResponseEntity<?> getMonthlyShare(@PathVariable("shareName") String shareName){
         try {
-            return new ResponseEntity<>(pServices.getIntradayShare(shareName),
+            return new ResponseEntity<>(pServices.getMonthlyShare(shareName),
                     HttpStatus.ACCEPTED);
         } catch (IOException ex) {
             return new ResponseEntity<>("No se han podido obtener las acciones", HttpStatus.NOT_FOUND);
