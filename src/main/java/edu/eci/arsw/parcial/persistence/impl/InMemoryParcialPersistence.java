@@ -11,7 +11,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import static javafx.css.StyleOrigin.USER_AGENT;
 import org.springframework.stereotype.Service;
 
 /**
